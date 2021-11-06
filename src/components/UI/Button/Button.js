@@ -3,7 +3,7 @@ import React from 'react';
 import classes from './Button.module.css';
 
 const Button = (props) => {
-  console.log("DemoOutput Button");
+  console.log("DemoOutput Button", props.children);
 
   return (
     <button
