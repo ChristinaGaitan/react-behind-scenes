@@ -3,6 +3,8 @@ import React from 'react';
 import classes from './Button.module.css';
 
 const Button = (props) => {
+  console.log("DemoOutput Button");
+
   return (
     <button
       type={props.type || 'button'}
@@ -15,4 +17,8 @@ const Button = (props) => {
   );
 };
 
-export default Button;
+// Here memo does not work because the onClick function is
+// a new one everytime the main component rerenders
+// in DemoOutput works because `false` is a primitive value
+// it doesn't work with arrays, objects and functions by default
+export default React.memo(Button);
