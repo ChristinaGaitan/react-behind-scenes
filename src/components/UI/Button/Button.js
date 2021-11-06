@@ -21,4 +21,5 @@ const Button = (props) => {
 // a new one everytime the main component rerenders
 // in DemoOutput works because `false` is a primitive value
 // it doesn't work with arrays, objects and functions by default
+// we need to use useCallback for this cases (App component)
 export default React.memo(Button);
